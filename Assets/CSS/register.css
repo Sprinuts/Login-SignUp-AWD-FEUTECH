@@ -6,21 +6,34 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    background: linear-gradient(to right, #c7f5ff, #7192ff);
 }
 
 .container {
-    width: 80%;
+    width: 100%;
     max-width: 600px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background: linear-gradient(to bottom, #ffffff, #efefef);
     border-radius: 10px;
-    padding: 20px;
+    padding: 60px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+@keyframes scrollColor {
+    0% {
+        color: #333;
+    }
+    50% {
+        color: #006aff;
+    }
+    100% {
+        color: #333;
+    }
+}
+
+.container h1 {
     text-align: center;
-    color: #333;
+    font-size: 40px;
+    animation: scrollColor 3s infinite;
 }
 
 .container div {
@@ -28,19 +41,20 @@ h1 {
 }
 
 .container p {
-    margin: 10px 0;
-    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px 0;
+    font-size: 20px;
 }
 
 .container p span {
     font-weight: bold;
-    color: #007bff;
+    color: #006aff;
 }
 
 .container p:hover span,
 .container #password:hover,
 .container #confirmPassword:hover {
-    color: #0056b3;
+    color: #006aff;
     cursor: pointer;
 }
 
@@ -48,5 +62,5 @@ h1 {
 #confirmPassword {
     display: inline-block;
     font-weight: bold;
-    color: #007bff;
+    color: #006aff;
 }
